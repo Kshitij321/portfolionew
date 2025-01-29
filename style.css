@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+   
+
+}
+
+
+#wrapper {
+   
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+
+.navbar {
+    animation: appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 40%;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.navleft {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navleft img {
+    width: 120px;
+    transition: all 0.8s ease-in-out;
+}
+
+.navleft div {
+    font-size: 30px;
+    padding-top: -50em;
+    font-weight: 600;
+
+}
+
+.navright {
+    margin: 50px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: 580;
+    transition: ease-out 1s;
+}
+
+.navleft img:hover {
+    transform: rotateZ(360deg);
+}
+
+.navright div:hover {
+    font-weight: bolder;
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    transition: all ease-out 0.5s;
+    width: 190px;
+    height: 50px;
+    font-size: 19px;
+    box-shadow: inset 0 0 0 white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+button:hover {
+    box-shadow: inset 200px 0 0 aqua;
+    transition: ease-in 0.5s;
+    color: black;
+    transform: scale(0.9);
+    
+   
+}
+
+.hero {
+    
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0px;
+    gap: 10px;
+
+}
+
+.lefthero {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    margin-left: 2.5rem;
+    gap: 30px;
+}
+
+.righthero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.righthero img {
+    margin-top: 70px;
+    margin-left: 200px;
+    margin-right: 40px;
+    border-radius: 50%; /* Makes the image circular */
+    width: 350px; /* Set a fixed width */
+    height: 350px; /* Match height with width for a perfect circle */
+    object-fit: cover;
+    object-position: 20% 5% ; /* Ensures the image fits properly inside the circle */
+    box-shadow: 0px 0px 20px #1f1f1f; /* Adds a shadow */
+    transform:scale (1.1);
+    
+}
+.righthero img:hover {
+    animation: myanim 0.5s ease forwards ; /* Apply animation */
+}
+
+@keyframes myanim {
+    0% {
+        transform: scale(1); /* Start at original size */
+    }
+    100% {
+        transform: scale(1.2); /* Scale to 1.5x */
+    }
+}
+
+
+.para {
+    font-size: 19px;
+}
+
+.profession {
+    font-size: 40px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+span {
+    color: rgb(0, 221, 255);
+    font-size: 50px;
+}
+
+.fadedtext {
+    position: absolute;
+    user-select: none;
+    font-size: 7rem;
+    color: rgb(152, 213, 222);
+    bottom: -16%;
+    top: 32rem;
+    left: 3rem;
+    font-weight: bold;
+    transition: all 3s;
+
+}
+.skillscontainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+   
+   
+}
+.skillscontainer img {
+    max-width: 100px;
+    height: 100px;
+    object-fit: cover;
+    
+} 
+.projects{
+   
+    background-color: rgb(231,231,231);
+    margin-top: 12rem;
+}
+.pheading{
+    text-align: center;
+    font-size: 90px;
+    padding-top: 30px;
+}
+.projectcontainer{
+    
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    color: white;
+}
+.projectcontent{
+    transition: ease-in 0.3s;
+}
+.projectcontentleft{
+    position: absolute;
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column; 
+   align-items: center;
+   justify-content:flex-end ;
+    z-index: 10; 
+    margin-top: 160px;
+    left: 10%;
+   
+}
+.projectcontentright{
+    position: absolute;
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column; 
+   align-items: center;
+   justify-content:flex-end ;
+    z-index: 10; 
+    margin-top: 180px;
+    margin-left: 400px;
+    right: 10%;
+}
+.projectheading{
+    font-size: 80px;
+}
+.projectsubheading{
+    font-size: 19px;
+    
+    text-align: left;
+    font-style: italic;
+    margin-left: 30px;
+    letter-spacing: 3px;
+}
+.projectcard {
+    width: 90%;
+    height: 550px;
+   
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 0px 40px #1f1f1f ;
+ 
+    
+    
+}
+#project1{
+    background-image: url(/Mini-netflix.png);
+}
+
+
+#project2{
+    background-image: url(./workout-buddy.png);
+}
+#project3{
+    background-image: url(/car3.jpg);
+}
+#project4{
+    background-image: url(/car4.jpg);
+}
+.projectcard::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1716169a;
+     z-index: 4; 
+
+}
+.projectcard::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: ease-out 0.5s;
+    background: linear-gradient(45deg,#343d68,#343d68be,#343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: 2;
+}
+.projectcard:hover::before{
+    transform: scaleX(1.005);
+   
+}
+.projectno{
+    position: absolute;
+    font-size: 13rem;
+    color: white;
+    z-index: 10;
+    opacity: 0;
+    
+    transition:  ease-in-out 0.4s;
+    font-weight: bold;
+}
+.projectcard:hover .projectno{
+   opacity: 1;
+}
+.projectcard:hover .projectcontent{
+    transform: scale(1.05);
+}
+
+.projectnoright{
+    right: -20px;
+    top: -40px;
+}
+.projectnoleft{
+    top:-30px;
+    left: -20px;
+}
+.btngroup{
+    margin-left: -290px;
+}
+#project2{
+    margin-left: 120px;
+}
+/* #project3{
+
+} */
+#project4{
+margin-left: 120px;
+}
+.skillscontainer2{
+display: flex;
+padding: 5rem;
+position: relative;
+gap: 130px;
+margin: 10rem auto;
+justify-content: center;
+align-items: center;
+max-width: 1200px;
+
+}
+.skillsleftcontainer2{
+display: flex;
+width: 50%;
+flex-direction: column;
+
+margin-left: -25px;
+}
+.skillsrightcontainer2{
+    animation: appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 40%;
+
+    display: flex;
+  
+    max-width: 50%;
+ /* padding-left: 10px; */
+    gap: 1.5rem;
+    align-items: center;
+    justify-content:left;
+  flex-wrap: wrap;
+  
+}
+
+.skillslogo{
+     max-width: 100%;
+    height: 100px; 
+     /* object-fit: cover;  */
+     
+   
+    margin-right: 23px;
+  
+    transition: ease-out 0.4s;
+}
+
+.skillslogo:hover{
+    transform: scale(1.45);
+}
+h1 span{
+    font-size: 140px;
+    color: aquamarine;
+}
+.skillheading
+{
+    font-size: 40px;
+    
+    color:rgb(17, 174, 217)
+}
+.skillparagraph {
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 595;
+    padding-bottom: 45%;
+    
+}
+.skillfadedtext{
+    position: absolute;
+    font-size: 15em;
+    font-weight: bolder;
+    color: rgb(131, 239, 230);
+    bottom: -20.5%;
+    right: -5%;
+    user-select: none;
+
+}
+#head{
+    font-size: 40px;
+}
+.contactcontainer{
+    animation: appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 40%;
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+}
+.nichecontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    width: 1200px;
+     margin: 0 auto; 
+}
+.contactheading h1{
+    font-size: 5rem;
+    padding-top: 2rem;
+    color: rgb(0, 0, 0);
+}
+.contactsubheading{
+    color: #343d68aa;
+    font-size: 2rem;
+}
+.contactusbtn{
+    margin-bottom: 2rem;
+    
+}
+.formcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+form{
+    
+    gap: 30px;
+    width: 70%;
+    margin: 2rem 5rem;
+    
+}
+.formfieldcontainer{
+    width: 100;
+
+}
+ .formfield{
+    width: 100%;
+    height: 42px;
+    padding: 0 2rem;
+    font-size: 18px;
+    box-shadow: 1px 1px 4px #1f1f1f;
+    font-weight: 500;
+    margin-top: 17px;
+} 
+#textarea{
+    height: auto;
+    padding: 1rem; 
+    width: 55rem;
+}
+footer{
+    position: relative;
+    margin-top: -1px;
+    background-color: #1e233f;
+    padding:5rem;
+}
+.footercontainer{
+    margin: 0 auto;
+    width: 1200px;
+}
+.footerwrapper{
+    display: flex;
+    padding: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.footerfadedtext{
+    position: absolute;
+    left: 0;
+    bottom:0;
+    color: #585c87;
+    user-select: none;
+    font-size: 5em;
+    transition:ease-out 0.3s;
+    animation: fadedanimation 1s ease-out forwards;
+
+}
+@keyframes fadedanimation {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+.footerfadedtext:hover{
+    color: aqua;
+}
+.linkcontainer{
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    
+}
+.linkcontainer div a{
+    color:white;
+    text-decoration: none;
+    transition: ease-out 0.6s ;
+    font-size: larger;
+    display: inline-block;
+}
+.linkcontainer div a:hover {
+    color: aquamarine;
+    transform: scale(1.2);
+}
+.iconscontainer{
+    display: flex;
+    gap: 1rem;
+
+}
+.iconscontainer i{
+transition: ease-out 0.5s;
+font-size: 2.8rem;
+}
+.iconscontainer i:hover{
+    color: aquamarine;
+    transform: scale(1.2);
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale:0.5;
+    }
+    to{
+        opacity:1;
+        scale:1
+    }
+
+}
+body {
+    background: linear-gradient(45deg, #e0f7fa, #ffffff, #e0f7fa, #ffffff);
+    background-size: 600% 600%;
+    animation: gradient 10s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 0% 50%; }
+    75% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  
+  
+  
+  
+  
+  
+ 
+
+
